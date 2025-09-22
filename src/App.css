@@ -1,0 +1,46 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+/* Global animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(100, 108, 255, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(100, 108, 255, 0.6); }
+}
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glowing-element {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 0.5rem;
+  }
+}
